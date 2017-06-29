@@ -3,9 +3,11 @@
     "noImplicitAny": false,
     "allowJs": true,
     "module": "commonjs",
-    "target": "es5"
+    "target": "es5",
+    "noLib": true
   },
   "files": [
+    "./lib.es6.d.ts",
     "./src/index.ts"
   ]
 }

@@ -3134,9 +3134,9 @@ ts-jest@^20.0.6:
     tsconfig "^6.0.0"
     yargs "^8.0.1"
 
-ts-loader@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-2.1.0.tgz#5a8efcc5c72c06fc49d69bad69c85617c6194f77"
+ts-loader@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-2.2.1.tgz#2ed6d2e1296335259562e3cb190a53832f7ec5a3"
   dependencies:
     colors "^1.0.3"
     enhanced-resolve "^3.0.0"
