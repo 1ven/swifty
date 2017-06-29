@@ -33,7 +33,7 @@
     "postpublish": "npm run clean"
   },
   "lint-staged": {
-    "*.js": [
+    "*.ts": [
       "prettier --write",
       "git add"
     ]
@@ -48,5 +48,8 @@
       "tsx",
       "js"
     ]
+  },
+  "dependencies": {
+    "most": "^1.5.0"
   }
 }
