@@ -7,10 +7,10 @@ import { Reducer, Mapper, ReducersSpec } from "./types";
  * @param spec Reducers stream spec.
  * @return Returns new reducers stream.
  */
-export default (spec: ReducersSpec): Reducer<any> =>
+export default <S>(spec: ReducersSpec): Reducer<S> =>
   mergeArray(
     Object.keys(spec).map((name: string) =>
-      spec[name].map((mapper: Mapper<any>) => (state = {}) => ({
+      spec[name].map((mapper: Mapper<any>) => (state = {} as any) => ({
         ...state,
         [name]: mapper(state[name])
       }))
