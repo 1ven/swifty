@@ -12,3 +12,10 @@ export type Mapper<S> = (prevState: S | void) => S;
  * Reducer is a Stream, emitting mapper function.
  */
 export type Reducer<S> = Stream<Mapper<S>>;
+
+/**
+ * Spec with reducer streams as values.
+ */
+export type ReducersSpec = {
+  [key: string]: Reducer<any>;
+};
