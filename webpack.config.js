@@ -5,14 +5,19 @@ const env = process.env.NODE_ENV;
 const config = {
   entry: './src',
   output: {
-    library: 'LibraryName',
+    library: 'Swifty',
     libraryTarget: 'umd'
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader'
+        loader: 'ts-loader',
+        options: {
+          compilerOptions: {
+            declaration: false
+          }
+        }
       }
     ]
   },
