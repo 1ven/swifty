@@ -1,4 +1,5 @@
 import { Stream } from "most";
+import { Subject } from "most-subject";
 
 /**
  * Creates a new state
@@ -19,3 +20,8 @@ export type Reducer<S> = Stream<Mapper<S>>;
 export type ReducersSpec = {
   [key: string]: Reducer<any>;
 };
+
+/**
+ * Action with payload.
+ */
+export type Action<T> = Subject<T>;
