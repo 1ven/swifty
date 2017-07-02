@@ -1,5 +1,4 @@
 import { Stream } from "most";
-import { Subject } from "most-subject";
 
 /**
  * Creates a new state
@@ -24,4 +23,4 @@ export type ReducersSpec = {
 /**
  * Action with payload.
  */
-export type Action<T> = Subject<T>;
+export type Action<T> = (payload: T) => void;

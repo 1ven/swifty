@@ -6,4 +6,8 @@ import { Action } from "./types";
  *
  * @return Returns new action.
  */
-export default <T>(): Action<T> => async<T>();
+export default <T>(): Action<T> => {
+  const subject$ = async<T>();
+
+  return (payload: T) => subject$.next(payload);
+};
