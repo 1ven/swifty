@@ -4,7 +4,8 @@
     "module": "commonjs",
     "target": "es5",
     "noLib": true,
-    "declaration": true
+    "declaration": true,
+    "sourceMap": true
   },
   "files": [
     "./lib.es6.d.ts",
