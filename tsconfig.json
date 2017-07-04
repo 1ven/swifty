@@ -5,7 +5,8 @@
     "target": "es5",
     "noLib": true,
     "declaration": true,
-    "sourceMap": true
+    "inlineSourceMap": true,
+    "inlineSources": true
   },
   "files": [
     "./lib.es6.d.ts",
