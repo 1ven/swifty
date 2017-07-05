@@ -25,3 +25,8 @@ export type ReducersSpec = {
  * Action with payload.
  */
 export type Action<T> = Subject<T>;
+
+/**
+ * Action with payload.
+ */
+export type Selector<S, P> = (state: S, props?: P) => any;

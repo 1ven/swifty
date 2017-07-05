@@ -9,6 +9,7 @@
   },
   "files": [
     "./lib.es6.d.ts",
-    "./src/index.ts"
+    "./src/index.ts",
+    "./src/helpers.ts"
   ]
 }
