@@ -29,4 +29,4 @@ export type Action<T> = Subject<T>;
 /**
  * Action with payload.
  */
-export type Selector<S, P> = (state: S, props?: P) => any;
+export type Selector<S, P, R> = (state: S, props?: P) => R;
