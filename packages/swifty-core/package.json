@@ -13,7 +13,7 @@
     "rx"
   ],
   "scripts": {
-    "build": "babel ./src --out-dir ./lib",
+    "build": "../../node_modules/.bin/babel ./src --out-dir ./lib",
     "clean": "rimraf ./lib",
     "prepare": "npm run clean && npm run build"
   },

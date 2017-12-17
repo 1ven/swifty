@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "main": "./lib/index.js",
   "license": "MIT",
-  "repository": "https://github.com/1ven/swifty/tree/master/packages/swifty",
+  "repository": "https://github.com/1ven/swifty/tree/master/packages/swifty-api",
   "files": [
     "lib/"
   ],
@@ -13,7 +13,7 @@
     "rx"
   ],
   "scripts": {
-    "build": "babel ./src --out-dir ./lib",
+    "build": "../../node_modules/.bin/babel ./src --out-dir ./lib",
     "clean": "rimraf ./lib",
     "prepare": "npm run clean && npm run build"
   },
