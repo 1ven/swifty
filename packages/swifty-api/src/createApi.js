@@ -1,9 +1,11 @@
 import createActions from "./createActions";
+import createStore from "./createStore";
 import fetchApi from "./fetchApi";
 import replaceParams from "./replaceParams";
 
 export default spec => {
   const actions = createActions();
+  const store$ = createStore(actions);
 
   actions.request$.subscribe(request => {
     fetchApi(
@@ -31,4 +33,9 @@ export default spec => {
       }
     );
   });
+
+  return {
+    ...actions$,
+    store$
+  };
 };
