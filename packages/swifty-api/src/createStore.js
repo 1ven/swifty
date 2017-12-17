@@ -12,7 +12,8 @@ export default actions =>
         ...state,
         isFetching: false,
         data: payload.body,
-        error: void 0
+        error: void 0,
+        lastUpdated: payload.meta.receivedAt
       })),
       actions.failure$.map(payload => state => ({
         ...state,
