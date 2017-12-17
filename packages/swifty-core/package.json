@@ -1,9 +1,9 @@
 {
-  "name": "swifty",
-  "version": "1.0.1",
+  "name": "swifty-core",
+  "version": "1.0.0",
   "main": "./lib/index.js",
   "license": "MIT",
-  "repository": "https://github.com/1ven/swifty/tree/master/packages/swifty",
+  "repository": "https://github.com/1ven/swifty/tree/master/packages/swifty-core",
   "files": [
     "lib/"
   ],
