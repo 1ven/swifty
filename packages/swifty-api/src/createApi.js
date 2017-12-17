@@ -5,7 +5,7 @@ import replaceParams from "./replaceParams";
 export default spec => {
   const actions = createActions();
 
-  actions.request$.subscribe(async request => {
+  actions.request$.subscribe(request => {
     fetchApi(
       {
         url: replaceParams(spec.url, request.params),
