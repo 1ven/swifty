@@ -7,7 +7,7 @@ export default spec => {
   const actions = createActions();
   const store$ = createStore(actions);
 
-  actions.request$.subscribe(request => {
+  actions.request$.subscribe((request = {}) => {
     fetchApi(
       {
         url: replaceParams(spec.url, request.params),
