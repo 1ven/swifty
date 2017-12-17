@@ -1,6 +1,8 @@
 export default (
   { url, headers, method, body } = {},
-  { request: mapRequest = identity, response: mapResponse = identity } = {}
+  { request: mapRequest = identity, response: mapResponse = identity } = {},
+  onSuccess,
+  onError
 ) => {
   fetch(url, {
     body: mapRequest(body),
@@ -22,11 +24,9 @@ export default (
         return onError(void 0, body, meta);
       }
 
-      return {
-        body,
-        meta
-      };
-    });
+      onSuccess(body, meta);
+    })
+    .catch(err => onError(err.message));
 };
 
 const identity = x => x;
