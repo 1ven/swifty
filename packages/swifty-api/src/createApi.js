@@ -35,7 +35,7 @@ export default spec => {
   });
 
   return {
-    ...actions$,
+    ...actions,
     store$
   };
 };
