@@ -11,12 +11,13 @@ export default actions =>
       actions.success$.map(payload => state => ({
         ...state,
         isFetching: false,
-        error: undefined,
-        data: payload.data
+        data: payload.body,
+        error: void 0
       })),
       actions.failure$.map(payload => state => ({
         ...state,
-        isFetching: true
+        isFetching: false,
+        error: payload.message
       }))
     ),
     {
