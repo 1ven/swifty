@@ -12,7 +12,6 @@ export default actions =>
         ...state,
         isFetching: false,
         error: undefined,
-        lastUpdated: payload.receivedAt,
         data: payload.data
       })),
       actions.failure$.map(payload => state => ({
