@@ -5,7 +5,7 @@ export default (
   onError
 ) => {
   fetch(url, {
-    body: mapRequest(body),
+    body,
     headers,
     method
   })

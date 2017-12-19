@@ -1,32 +1,28 @@
 import createActions from "./createActions";
 import createStore from "./createStore";
 import fetchApi from "./fetchApi";
-import replaceParams from "./replaceParams";
 
-export default spec => {
+export default (fn, config) => {
   const actions = createActions();
   const store$ = createStore(actions);
 
-  actions.request$.subscribe((request = {}) => {
+  actions.request.stream$.subscribe((payload = {}) => {
+    const api = fn(payload);
+
     fetchApi(
-      {
-        url: replaceParams(spec.url, request.params),
-        method: spec.method,
-        headers: spec.headers,
-        body: request.body
-      },
-      spec.map,
+      api,
+      config,
       (body, meta) => {
-        actions.success$.next({
-          request,
+        actions.success.dispatch({
+          request: payload,
           body,
           meta
         });
       },
       (message, body, meta) => {
-        actions.failure$.next({
+        actions.failure.dispatch({
+          request: payload,
           message,
-          request,
           body,
           meta
         });
