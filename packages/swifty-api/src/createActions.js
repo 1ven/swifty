@@ -1,7 +1,7 @@
-import { Subject } from "rxjs";
+import { createAction } from "swifty-core";
 
 export default () => ({
-  request$: new Subject(),
-  success$: new Subject(),
-  failure$: new Subject()
+  request$: createAction(),
+  success$: createAction(),
+  failure$: createAction()
 });
