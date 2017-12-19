@@ -1,6 +1,6 @@
 export default (
   { url, headers, method, body } = {},
-  { request: mapRequest = identity, response: mapResponse = identity } = {},
+  { mapResponse = identity } = {},
   onSuccess,
   onError
 ) => {
